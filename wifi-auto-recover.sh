@@ -50,8 +50,8 @@ monitor_ping() {
             ((current_count++))
             echo "$current_count" > "$timeout_file"
             
-            # Check if we hit 3 consecutive timeouts
-            if [ "$current_count" -ge 3 ]; then
+            # Check if we hit 10 consecutive timeouts
+            if [ "$current_count" -ge 10 ]; then
                 # Kill ping process
                 pkill -P $$ ping 2>/dev/null
                 killall ping 2>/dev/null

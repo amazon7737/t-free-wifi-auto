@@ -20,7 +20,7 @@ chmod +x wifi-auto-recover.sh
 
 ### 자동 복구
 
-ping 모니터링 중 타임아웃 발생 시:
+ping 모니터링 중 10회 연속 타임아웃 발생 시:
 - 1차: 자동 재시도 (NONE → DHCP) → 40초 대기 → ping 재개
 - 2차: 자동 재시도 (NONE → DHCP) → ping 재개
 - 3차 이후: 메뉴로 복귀
